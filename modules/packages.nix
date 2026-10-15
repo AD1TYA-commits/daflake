@@ -1,20 +1,24 @@
-{ pkgs, ... }:
+ { pkgs, ... }:
 
 let
   helium = pkgs.callPackage ../packages/helium.nix {};
 in
 {
   environment.systemPackages = with pkgs; [
-    awww
-    htop
+    # Niri                  
     quickshell
-    librewolf
-    helium
     mako
+    fuzzel
     thunar
-    playerctl
+    awww
     wl-clipboard
     brightnessctl
+    playerctl
+
+    # Larping                 
+    librewolf
+    helium
+    htop
     fastfetch
     fzf
     bat
@@ -22,7 +26,6 @@ in
     eza
     starship
     nerd-fonts.iosevka
-    fuzzel
     git
     legcord
     gh

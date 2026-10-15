@@ -1,5 +1,5 @@
 {
-  description = "configuration";
+  description = "Aditya's NixOS configuration";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
@@ -15,7 +15,7 @@
       system = "x86_64-linux";
 
       modules = [
-        ./configuration.nix
+        ./hosts/nixos/default.nix
         home-manager.nixosModules.home-manager
 
         {

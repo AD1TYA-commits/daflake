@@ -7,7 +7,7 @@
 *.bak
 *.pre-*
 
-# Editor and temporary files
+# Editor temporary files
 *~
 *.swp
 *.swo

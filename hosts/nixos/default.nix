@@ -3,10 +3,10 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./modules/desktop.nix
-    ./modules/packages.nix
-    ./modules/nix-ld.nix
-    ./users.nix
+    ../../modules/desktop.nix
+    ../../modules/packages.nix
+    ../../modules/nix-ld.nix
+    ../../modules/users.nix
   ];
 
   boot.loader.systemd-boot.enable = true;
