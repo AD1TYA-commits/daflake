@@ -1,1 +1,13 @@
-/users.nix
+# Nix build results
+/result
+/result-*
+
+# Local backups
+*.backup
+*.bak
+*.pre-*
+
+# Editor and temporary files
+*~
+*.swp
+*.swo

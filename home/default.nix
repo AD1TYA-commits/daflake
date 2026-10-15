@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./terminal.nix
+    ./programs/terminal.nix
   ];
 
   home.username = "aditya";
