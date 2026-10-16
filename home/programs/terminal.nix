@@ -10,6 +10,7 @@
     };
 
     settings = {
+      hide_window_decorations = "yes";
       enable_audio_bell = false;
       confirm_os_window_close = 0;
       scrollback_lines = 10000;
