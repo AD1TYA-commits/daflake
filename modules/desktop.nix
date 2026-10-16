@@ -1,6 +1,17 @@
-{...}:
+{ config, inputs, pkgs, ... }:
 
 {
-    programs.niri.enable = true;
-    programs.waybar.enable = true;
+  imports = [
+    inputs.inir.nixosModules.inir
+  ];
+
+  programs.niri.enable = true;
+
+  programs.inir = {
+    enable = true;
+    service.compositor = "niri";
+    extraPackages = [
+      config.programs.niri.package
+    ];
+  };
 }
