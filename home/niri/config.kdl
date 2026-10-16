@@ -264,6 +264,7 @@ layout {
 
 // Add lines like this to spawn processes at startup.
 spawn-at-startup "awww-daemon"
+spawn-at-startup "awww-daemon" "--namespace" "overview"
 
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
@@ -686,5 +687,18 @@ window-rule {
     }
 }
 
-layer-rule {
+window-rule {
+    match app-id="^legcord$"
+    draw-border-with-background false
+    border {
+        off
+    }
+}
+
+window-rule {
+    match app-id="^legcord$"
+    draw-border-with-background false
+    border {
+        off
+    }
 }
