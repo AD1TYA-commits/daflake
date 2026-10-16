@@ -1,10 +1,11 @@
- { pkgs, ... }:
+ { pkgs, inputs, ... }:
 
 let
   helium = pkgs.callPackage ../packages/helium.nix {};
 in
 {
   environment.systemPackages = with pkgs; [
+    inputs.spotifast.packages."${pkgs.stdenv.hostPlatform.system}".default
     # Niri                  
     quickshell
     mako
@@ -14,6 +15,8 @@ in
     wl-clipboard
     brightnessctl
     playerctl
+    nerd-fonts.iosevka
+    waybar
 
     # Larping                 
     librewolf

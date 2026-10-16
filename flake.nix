@@ -3,6 +3,7 @@
   description = ":wqconfiguration";
 
   inputs = {
+    spotifast.url = "github:crmne/spotifast";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
 
     home-manager = {
