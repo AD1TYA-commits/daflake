@@ -685,3 +685,8 @@ window-rule {
         blur true
     }
 }
+
+layer-rule {
+    match namespace="^awww-daemon$"
+    place-within-backdrop true
+}
