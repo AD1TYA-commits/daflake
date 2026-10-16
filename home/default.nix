@@ -1,11 +1,15 @@
 { ... }:
 
 {
-  imports = [
-    ./programs/terminal.nix
-  ];
+  xdg.configFile."niri/config.kdl".text = ''
+    window-rule {
+      geometry-corner-radius 12
+      clip-to-geometry true
+    }
 
-  home.username = "aditya";
-  home.homeDirectory = "/home/aditya";
-  home.stateVersion = "26.05";
+    layer-rule {
+      match namespace="^launcher$"
+      geometry-corner-radius 12
+    }
+  '';
 }
